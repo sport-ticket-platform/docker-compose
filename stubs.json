@@ -1,0 +1,128 @@
+[
+  {
+    "service": "UserService",
+    "method": "GetUserByEmail",
+    "input": {
+      "equals": {
+        "email": "taha.visit@gmail.com"
+      }
+    },
+    "output": {
+      "data": {
+        "id": 1,
+        "role": "USER",
+        "email": "taha.visit@gmail.com",
+        "phone": "09123456789",
+        "password": "$2a$10$wE1d.T783vYw42nN5z1zYuL1yA98nC4w4Q2g6y8o4u6g222222222",
+        "status": true,
+        "is_two_factor_enabled": false
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "GetUserByEmail",
+    "input": {
+      "contains": {}
+    },
+    "output": {
+      "error": "User not found",
+      "code": 5
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "GetUserByPhone",
+    "input": {
+      "equals": {
+        "phone": "09123456789"
+      }
+    },
+    "output": {
+      "data": {
+        "id": 1,
+        "role": "USER",
+        "email": "taha.visit@gmail.com",
+        "phone": "09123456789",
+        "password": "$2a$10$wE1d.T783vYw42nN5z1zYuL1yA98nC4w4Q2g6y8o4u6g222222222",
+        "status": true,
+        "is_two_factor_enabled": false
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "GetUserByPhone",
+    "input": {
+      "contains": {}
+    },
+    "output": {
+      "error": "User not found",
+      "code": 5
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "CheckEmailExists",
+    "input": {
+      "equals": {
+        "email": "taha.visit@gmail.com"
+      }
+    },
+    "output": {
+      "data": {
+        "exists": true
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "CheckEmailExists",
+    "input": {
+      "contains": {}
+    },
+    "output": {
+      "data": {
+        "exists": false
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "CheckPhoneExists",
+    "input": {
+      "equals": {
+        "phone": "09123456789"
+      }
+    },
+    "output": {
+      "data": {
+        "exists": true
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "CheckPhoneExists",
+    "input": {
+      "contains": {}
+    },
+    "output": {
+      "data": {
+        "exists": false
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "CreateUser",
+    "input": {
+      "contains": {}
+    },
+    "output": {
+      "data": {
+        "user_id": 2
+      }
+    }
+  }
+]

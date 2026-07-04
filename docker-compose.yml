@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: sportik-psg
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: taha1111
+      POSTGRES_DB: sportik-backend
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./tables.sql:/docker-entrypoint-initdb.d/tables.sql:ro
+    restart: unless-stopped
+
+  redis:
+    image: redis:7
+    container_name: sportik-redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  mock-user:
+    image: tkpd/gripmock:latest
+    container_name: sportik-mock-user
+    ports:
+      - "9090:4770"
+    volumes:
+      - ./user.proto:/proto/user.proto:ro
+      - ./stubs.json:/stub/stubs.json:ro
+    command: --stub=/stub/stubs.json /proto/user.proto
+    restart: unless-stopped
