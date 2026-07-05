@@ -11,7 +11,8 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./tables.sql:/docker-entrypoint-initdb.d/tables.sql:ro
+      - ./01_tables.sql:/docker-entrypoint-initdb.d/01_tables.sql:ro
+      - ./02_sample.sql:/docker-entrypoint-initdb.d/02_sample.sql:ro
     restart: unless-stopped
 
   redis:
