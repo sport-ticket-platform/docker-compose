@@ -23,7 +23,9 @@
     "service": "UserService",
     "method": "GetUserByEmail",
     "input": {
-      "contains": {}
+      "matches": {
+        "email": ".*"
+      }
     },
     "output": {
       "error": "User not found",
@@ -54,7 +56,9 @@
     "service": "UserService",
     "method": "GetUserByPhone",
     "input": {
-      "contains": {}
+      "matches": {
+        "phone": ".*"
+      }
     },
     "output": {
       "error": "User not found",
@@ -79,7 +83,9 @@
     "service": "UserService",
     "method": "CheckEmailExists",
     "input": {
-      "contains": {}
+      "matches": {
+        "email": ".*"
+      }
     },
     "output": {
       "data": {
@@ -105,7 +111,9 @@
     "service": "UserService",
     "method": "CheckPhoneExists",
     "input": {
-      "contains": {}
+      "matches": {
+        "phone": ".*"
+      }
     },
     "output": {
       "data": {
@@ -117,7 +125,9 @@
     "service": "UserService",
     "method": "CreateUser",
     "input": {
-      "contains": {}
+      "matches": {
+        "email": ".*"
+      }
     },
     "output": {
       "data": {

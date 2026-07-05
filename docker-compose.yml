@@ -29,5 +29,5 @@ services:
     volumes:
       - ./user.proto:/proto/user.proto:ro
       - ./stubs.json:/stub/stubs.json:ro
-    command: --stub=/stub/stubs.json /proto/user.proto
+    command: --stub=/stub /proto/user.proto
     restart: unless-stopped
