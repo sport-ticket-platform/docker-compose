@@ -4,18 +4,38 @@
     "method": "GetUserByEmail",
     "input": {
       "equals": {
-        "email": "taha.visit@gmail.com"
+        "email": "taha1@gmail.com"
       }
     },
     "output": {
       "data": {
         "id": 1,
         "role": "USER",
-        "email": "taha.visit@gmail.com",
+        "email": "taha1@gmail.com",
         "phone": "09123456789",
         "password": "$2a$10$Z.L.lraonXSir65cakFSROtECTclUNEVxfuC.i5GYUQiRZulNu.E2",
         "status": true,
         "is_two_factor_enabled": false
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "GetUserByEmail",
+    "input": {
+      "equals": {
+        "email": "taha2@gmail.com"
+      }
+    },
+    "output": {
+      "data": {
+        "id": 2,
+        "role": "USER",
+        "email": "taha2@gmail.com",
+        "phone": "09193456788",
+        "password": "$2a$10$Z.L.lraonXSir65cakFSROtECTclUNEVxfuC.i5GYUQiRZulNu.E2",
+        "status": true,
+        "is_two_factor_enabled": true
       }
     }
   },
@@ -32,6 +52,10 @@
       "code": 5
     }
   },
+
+
+
+
   {
     "service": "UserService",
     "method": "GetUserByPhone",
@@ -44,11 +68,31 @@
       "data": {
         "id": 1,
         "role": "USER",
-        "email": "taha.visit@gmail.com",
+        "email": "taha1@gmail.com",
         "phone": "09123456789",
         "password": "$2a$10$Z.L.lraonXSir65cakFSROtECTclUNEVxfuC.i5GYUQiRZulNu.E2",
         "status": true,
         "is_two_factor_enabled": false
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "GetUserByPhone",
+    "input": {
+      "equals": {
+        "phone": "09193456788"
+      }
+    },
+    "output": {
+      "data": {
+        "id": 2,
+        "role": "USER",
+        "email": "taha2@gmail.com",
+        "phone": "09193456788",
+        "password": "$2a$10$Z.L.lraonXSir65cakFSROtECTclUNEVxfuC.i5GYUQiRZulNu.E2",
+        "status": true,
+        "is_two_factor_enabled": true
       }
     }
   },
@@ -65,12 +109,30 @@
       "code": 5
     }
   },
+
+
+
+
   {
     "service": "UserService",
     "method": "CheckEmailExists",
     "input": {
       "equals": {
-        "email": "taha.visit@gmail.com"
+        "email": "taha1@gmail.com"
+      }
+    },
+    "output": {
+      "data": {
+        "exists": true
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "CheckEmailExists",
+    "input": {
+      "equals": {
+        "email": "taha2@gmail.com"
       }
     },
     "output": {
@@ -93,12 +155,28 @@
       }
     }
   },
+
+
   {
     "service": "UserService",
     "method": "CheckPhoneExists",
     "input": {
       "equals": {
         "phone": "09123456789"
+      }
+    },
+    "output": {
+      "data": {
+        "exists": true
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "CheckPhoneExists",
+    "input": {
+      "equals": {
+        "phone": "09193456788"
       }
     },
     "output": {
@@ -121,6 +199,10 @@
       }
     }
   },
+
+
+
+  
   {
     "service": "UserService",
     "method": "CreateUser",
