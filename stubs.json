@@ -1,6 +1,64 @@
 [
   {
     "service": "UserService",
+    "method": "GetUserById",
+    "input": {
+      "equals": {
+        "id": 1
+      }
+    },
+    "output": {
+      "data": {
+        "id": 1,
+        "role": "USER",
+        "email": "taha1@gmail.com",
+        "phone": "09123456789",
+        "password": "$2a$10$Z.L.lraonXSir65cakFSROtECTclUNEVxfuC.i5GYUQiRZulNu.E2",
+        "status": true,
+        "is_two_factor_enabled": false
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "GetUserById",
+    "input": {
+      "equals": {
+        "id": 2
+      }
+    },
+    "output": {
+      "data": {
+        "id": 2,
+        "role": "USER",
+        "email": "taha2@gmail.com",
+        "phone": "09193456788",
+        "password": "$2a$10$Z.L.lraonXSir65cakFSROtECTclUNEVxfuC.i5GYUQiRZulNu.E2",
+        "status": true,
+        "is_two_factor_enabled": true
+      }
+    }
+  },
+  {
+    "service": "UserService",
+    "method": "GetUserById",
+    "input": {
+      "matches": {
+        "id": ".*"
+      }
+    },
+    "output": {
+      "error": "User not found",
+      "code": 5
+    }
+  },
+
+
+
+
+
+  {
+    "service": "UserService",
     "method": "GetUserByEmail",
     "input": {
       "equals": {
@@ -29,7 +87,7 @@
     },
     "output": {
       "data": {
-        "id": 1,
+        "id": 2,
         "role": "USER",
         "email": "taha2@gmail.com",
         "phone": "09193456788",
@@ -86,7 +144,7 @@
     },
     "output": {
       "data": {
-        "id": 1,
+        "id": 2,
         "role": "USER",
         "email": "taha2@gmail.com",
         "phone": "09193456788",
