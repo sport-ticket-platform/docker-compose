@@ -39,14 +39,9 @@
       }
     }
   },
-  {
+{
     "service": "UserService",
     "method": "GetUserById",
-    "input": {
-      "matches": {
-        "id": ".*"
-      }
-    },
     "output": {
       "error": "User not found",
       "code": 5
