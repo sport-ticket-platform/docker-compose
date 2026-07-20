@@ -32,3 +32,14 @@ services:
       - ./stubs.json:/stub/stubs.json:ro
     command: --stub=/stub /proto/user.proto
     restart: unless-stopped
+
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: sportik-jaeger
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    ports:
+      - "16686:16686" # Jaeger Web UI
+      - "4317:4317"   # Port for receiving data with gRPC protocol
+      - "4318:4318"   # Port for receiving data with HTTP protocol
+    restart: unless-stopped
