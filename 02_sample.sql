@@ -13,14 +13,28 @@ INSERT INTO sport (sport_name) VALUES
 ('Basketball');
 
 INSERT INTO users (user_id, first_name, last_name, role, email, email_verified, phone_number, phone_verified, password, city_id, status) 
-VALUES (
+VALUES 
+(
     1, 
     'Taha', 
     'Amini', 
     'ADMIN', 
-    'taha.visit@gmail.com', 
+    'taha1@gmail.com', 
     true, 
     '09123456789', 
+    true, 
+    '$2a$10$Z.L.lraonXSir65cakFSROtECTclUNEVxfuC.i5GYUQiRZulNu.E2', -- هَش کلمه taha
+    1, 
+    true
+),
+(
+    2, 
+    'Taha', 
+    'Amini', 
+    'USER', 
+    'taha2@gmail.com', 
+    true, 
+    '09193456788', 
     true, 
     '$2a$10$Z.L.lraonXSir65cakFSROtECTclUNEVxfuC.i5GYUQiRZulNu.E2', -- هَش کلمه taha
     1, 
