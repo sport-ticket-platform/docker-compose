@@ -269,5 +269,23 @@
         "user_id": 2
       }
     }
+  },
+
+  {
+    "service": "UserService",
+    "method": "ChangeUserPassword",
+    "input": {
+      "equals": {
+        "id": 1
+      },
+      "matches": {
+        "new_password": ".*"
+      }
+    },
+    "output": {
+      "data": {
+        "success": true
+      }
+    }
   }
 ]
